@@ -14,8 +14,9 @@ module Ember
 
       config.before_initialize do |app|
         Sprockets::Engines #force autoloading
-        Sprockets.register_mime_type '"text/x-handlebars-template', extensions: ['.handlebars', '.hbs', '.hjs'], charset: :unicode
-        Sprockets.register_preprocessor 'text/x-handlebars-template', Ember::Handlebars::Template
+        Sprockets.register_engine '.handlebars', Ember::Handlebars::Template
+        Sprockets.register_engine '.hbs', Ember::Handlebars::Template
+        Sprockets.register_engine '.hjs', Ember::Handlebars::Template
       end
     end
   end

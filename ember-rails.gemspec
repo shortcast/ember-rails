@@ -27,8 +27,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency "tzinfo"
   s.add_development_dependency "vcr"
   s.add_development_dependency "webmock", "< 1.14.0"
-
-  s.add_development_dependency "sprockets-rails"
+  s.add_development_dependency "rails", '>= 5.0.0'
+  s.add_development_dependency "sprockets-rails", '~> 3.0.0'
   s.add_development_dependency "handlebars-source", "> 1.0.0", "< 3"
   s.add_development_dependency "test-unit"
   s.add_development_dependency "safe_yaml", ">= 1.0.4"
@@ -36,4 +36,5 @@ Gem::Specification.new do |s|
   s.files = %w(README.md LICENSE) + Dir["app/**/*", "lib/**/*", "vendor/**/*"]
 
   s.require_paths = ["lib"]
+  s.required_ruby_version = '>= 2.3.0'
 end
